@@ -202,7 +202,6 @@ def Q_6_12():
     Y_pred = model.predict(X_test)
     print(Y_pred)
 
-
     # 显示图像
     plt.figure()
     plt.plot(range(len(Y_pred)),Y_pred,'b',label="predict")
@@ -214,8 +213,7 @@ def Q_6_12():
     plt.savefig("result/线性统计/6.12/compare_linear.jpg")
     plt.show()
 
-
-    # 残差预测值
+    #  残差预测值
     #  enumerate 函数可以把一个 list 变成索引-元素对
     y_dif = []
     for i in range(len(Y_pred)):
@@ -223,11 +221,11 @@ def Q_6_12():
     tmp = {'x':range(len(y_dif)),'y':y_dif}
     df = pd.DataFrame(tmp)
     sns.residplot(x="x", y="y",data=df)
-    plt.savefig("result/线性统计/6.12/残差图1.jpg")
-    plt.title('残差图1')
+    plt.savefig("result/线性统计/6.12/残差图.jpg")
+    plt.title('残差图')
     plt.show()
 
 
 if __name__ == '__main__':
-    Q_6_7()
+   # Q_6_7()
     Q_6_12()
