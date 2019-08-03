@@ -29,7 +29,7 @@ class PA2:
         f = open("Data/adult.csv", "w")
 
         fdata = open("Data/adult.data", "r")
-        ftest = open("Data/adult_test.data")
+        ftest = open("Data/adult.test",'r')
         k = 0
 
         for row in fdata:
@@ -46,7 +46,7 @@ class PA2:
         # print(k)
         f.close()
 
-        datadf = pd.read_csv("adult.csv", header=None, na_values=['?'], names=names)
+        datadf = pd.read_csv("Data/adult.csv", header=None, na_values=['?'], names=names)
 
         del datadf["workclass"]
         del datadf["race"]
