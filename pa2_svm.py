@@ -1,17 +1,12 @@
-import os
+import matplotlib.pyplot as plt
 import numpy as np
 import pandas as pd
-import pdb
-
-from sklearn.svm import SVC
-from sklearn.model_selection import train_test_split
-from sklearn.metrics import roc_auc_score
-from sklearn.metrics import classification_report
-
 from sklearn import metrics
-from sklearn.metrics import roc_curve, auc
-import matplotlib.pyplot as plt
-import random
+from sklearn.metrics import auc
+from sklearn.metrics import classification_report
+from sklearn.metrics import roc_auc_score
+from sklearn.model_selection import train_test_split
+from sklearn.svm import SVC
 
 
 class PA2:
@@ -132,8 +127,8 @@ if __name__ == "__main__":
 
     # 进行实验调参
     # estimator = SVC(C=0.1, probability=True)
-    estimator = SVC(C=0.5, probability=True)
-    # estimator = SVC(C=1.0, probability=True)
+    # estimator = SVC(C=0.5, probability=True)
+    estimator = SVC(C=1.0, probability=True)
 
     pa2 = PA2(estimator)
 
