@@ -127,8 +127,8 @@ if __name__ == "__main__":
 
     # 进行实验调参
     # estimator = SVC(C=0.1, probability=True)
-    # estimator = SVC(C=0.5, probability=True)
-    estimator = SVC(C=1.0, probability=True)
+    estimator = SVC(C=0.5, probability=True)
+    # estimator = SVC(C=1.0, probability=True)
 
     pa2 = PA2(estimator)
 
