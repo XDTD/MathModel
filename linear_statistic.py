@@ -80,11 +80,14 @@ plt.savefig("result/compare_linear.jpg")
 plt.show()
 
 
-
 # 残差预测值
 #  enumerate 函数可以把一个 list 变成索引-元素对
-tmp = {'x':range(len(Y_pred[:,0])),'y':Y_pred[:,0]}
+y_dif = []
+for i in range(len(Y_pred)):
+    y_dif.append(Y_pred[i,0]-Y_test['y'].values[i])
+tmp = {'x':range(len(y_dif)),'y':y_dif}
 df = pd.DataFrame(tmp)
 sns.residplot(x="x", y="y",data=df)
 plt.savefig("result/残差图.jpg")
 plt.title('残差图')
+plt.show()
