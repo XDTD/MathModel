@@ -25,7 +25,7 @@ while k<0.3
         break;
     end
 end
-title('风险改变图')
+title('模型2风险改变图')
 %% Q3
 ri = [5 28 21 23 25]/100;
 qi = [0 2.5 1.5 5.5 2.6 ]/100;
@@ -49,17 +49,20 @@ while s<1
     fff=[fff,exitflag];
     Q =val;
     res1=[res1,ri_pi*X'];
-    res2=[res2,max(qi.*X)];
+    res2=[res2,max(qi.*X)];    
+    plot(s,val,'.')
+    title('模型3')
+    hold on
     if exitflag~=1
         break;
     end
     s = s +0.001;
 end
-figure
-hold on
-plot(0:0.001:s,res1,'.');
-title('收益图')
-figure
-hold on
-plot(0:0.001:s,res2,'.');
-title('风险图')
+% figure
+% hold on
+% plot(0:0.001:s,res1,'.');
+% title('收益图')
+% figure
+% hold on
+% plot(0:0.001:s,res2,'.');
+% title('风险图')
